@@ -20,6 +20,18 @@ run command: npx create-react-app client
 
 Lets run the react app template with the following command. Make sure your terminal is at the root of the client directory (you might have to change directory using the command "cd client"): npm start
 
+## Add Bootstap
+
+- install through npm in terminal
+- 'import "bootstrap/dist/css/bootstrap.min.css"' in App.js
+
+## Install the React Router
+
+The React Router Dom is a dependency to manage the “routes” between your different web pages as well your different React components. Make sure your terminal is at the root of the client folder,
+then run:
+
+- npm i react-router-dom
+
 ## Useful Links
 
 [Components and Props](https://reactjs.org/docs/components-and-props.html)
@@ -27,3 +39,5 @@ Lets run the react app template with the following command. Make sure your termi
 [JSX Intro](https://reactjs.org/docs/introducing-jsx.html)
 
 [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+
+[Install Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
