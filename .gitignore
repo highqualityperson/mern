@@ -8,3 +8,4 @@ node_modules/
 
 # JS files because of sensitive info
 server/keys.js
+config/config.json
