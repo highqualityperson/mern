@@ -1,4 +1,5 @@
-const cityModel = require("./model/cityModel");
+const cityModel = require("../../model/cityModel");
+const auth = require("../../middleware/middleware");
 const express = require("express");
 const router = express.Router();
 
@@ -22,6 +23,7 @@ router.post("/", (req, res) => {
     name: req.body.name,
     country: req.body.country,
   });
+
   newCity
     .save()
     .then((city) => {

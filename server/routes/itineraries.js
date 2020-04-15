@@ -1,4 +1,4 @@
-const itineraryModel = require("./model/itineraryModel");
+const itineraryModel = require("../../model/itineraryModel");
 const express = require("express");
 const router = express.Router();
 
@@ -22,3 +22,5 @@ router.get("/:name", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
+module.exports = router;
