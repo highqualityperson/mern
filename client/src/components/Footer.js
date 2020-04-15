@@ -6,7 +6,7 @@ class MyFooter extends React.Component {
   render() {
     return (
       <Link to="/">
-        <img className="home-img" src={HomeIcon} alt="Home Icon" />
+        <HomeIcon style={{ fill: "black" }} />
       </Link>
     );
   }
