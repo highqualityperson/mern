@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const config = require("config");
+const config = require("../config/config.json");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -19,7 +19,7 @@ app.use(cors());
     Key to access database 
     hosted on https://cloud.mongodb.com/
  */
-const db = config.get("mongoDBconString");
+const db = config.mongoDBconString;
 
 /* connect using mongoose */
 mongoose

@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+/* Drawer */
+
+.drawerliststyle a {
+  text-decoration: none;
+  color: black;
+}
+.iconstyle {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: black;
+}
+
+/* NavBar */
+.NavBar {
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Landing Page */
+
+.user-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 25%;
+}
+
+.link-img {
+  height: 20vmin;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/* Footer */
+
+.home-img {
+  height: 10vmin;
+}

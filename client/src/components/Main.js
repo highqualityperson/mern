@@ -4,7 +4,7 @@ import { fetchItineraries } from "../store/actions/itineraryActions.js";
 import ItineraryCard from "./ItineraryCard";
 import { Link } from "react-router-dom";
 
-class MYtinerary extends React.Component {
+class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,4 +64,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchItineraries })(MYtinerary);
+export default connect(mapStateToProps, { fetchItineraries })(Main);

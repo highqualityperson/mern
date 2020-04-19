@@ -3,7 +3,7 @@ const userModel = require("../../model/userModel");
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const config = require("config");
+const config = require("../../config/config.json");
 const jwt = require("jsonwebtoken");
 
 // post Auth user
@@ -26,7 +26,7 @@ router.post("/", (req, res) => {
 
       jwt.sign(
         { _id: user._id },
-        config.get("jwtSecret"),
+        config.jwtSecret,
         { expiresIn: 3600 },
         (err, token) => {
           if (err) throw err;

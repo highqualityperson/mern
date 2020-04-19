@@ -41,7 +41,6 @@ class SignUp extends React.Component {
   // function to submit the user info
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
     const { name, email, password } = this.state;
 
     // Create user object

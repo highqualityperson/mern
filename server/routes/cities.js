@@ -5,7 +5,7 @@ const router = express.Router();
 
 /* get all cities
  */
-router.get("/all", (req, res) => {
+router.get("/", (req, res) => {
   cityModel
     .find({})
     .then((files) => {
@@ -14,24 +14,31 @@ router.get("/all", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-res.send({ msg: "Cities test route." });
-
-/* post cities (private)
+/*  post new city
  */
-router.post("/", (req, res) => {
+
+router.post("/", auth, (req, res) => {
   const newCity = new cityModel({
-    name: req.body.name,
+    city: req.body.name,
     country: req.body.country,
   });
 
-  newCity
-    .save()
-    .then((city) => {
-      res.send(city);
-    })
-    .catch((err) => {
-      res.status(500).send("Server error");
-    });
+  cityModel.find({}).then((files) => {
+    for (i = 0; i < files.length; i++) {
+      if (files[i].name == newCity.name) {
+        console.log("this city already exists");
+      } else {
+        newCity
+          .save()
+          .then((name) => {
+            res.send(name);
+          })
+          .catch((err) => {
+            res.status(500).send("Server error");
+          });
+      }
+    }
+  });
 });
 
 module.exports = router;
