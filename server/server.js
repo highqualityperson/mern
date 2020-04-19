@@ -23,7 +23,11 @@ const db = config.mongoDBconString;
 
 /* connect using mongoose */
 mongoose
-  .connect(db, { useNewUrlParser: true, useCreateIndex: true })
+  .connect(db, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  })
   .then(() => console.log("Connection to Mongo DB established"))
   .catch((err) => console.log(err));
 
