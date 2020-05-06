@@ -1,16 +1,16 @@
-export const fetchCities = () => (dispatch) => {
+export const fetchCities = () => dispatch => {
   fetch("/cities/")
-    .then((res) => res.json())
-    .then((result) => {
+    .then(res => res.json())
+    .then(result => {
       dispatch({
         type: "FETCH_CITIES",
-        payload: result,
+        payload: result
       });
     })
-    .catch((error) => {
+    .catch(error => {
       this.setState({
         isLoaded: true,
-        error,
+        error
       });
     });
 };

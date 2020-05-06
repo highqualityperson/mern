@@ -1,23 +1,17 @@
-import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import UserMenu from "./components/UserMenuComponent";
+import SideBar from "./components/SideBar";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Cities from "./components/CitiesPage";
+import SignUp from "./components/SignUpPage";
+import LogIn from "./components/LogInPage";
+import CityCard from "./components/CityCard";
+import Favourites from "./components/FavouritesPage";
 import { loadUser } from "./store/actions/authActions";
 import { connect } from "react-redux";
-
-/* graphical */
-// import cat from "./cat.png";
-import "./App.css";
-
-/*  load components */
-import Landing from "./components/Landing.js";
-import Footer from "./components/Footer.js";
-import User from "./components/User.js";
-import Drawer from "./components/Drawer.js";
-import Cities from "./components/Cities.js";
-import SignUp from "./components/SignUp.js";
-import LogIn from "./components/LogIn.js";
-import Main from "./components/Main.js";
-import Favorit from "./components/Favorit.js";
 
 class App extends React.Component {
   componentDidMount() {
@@ -28,23 +22,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        <Router>
           <div className="NavBar">
-            <User user={this.props.user} />
-            <Drawer />
+            <SideBar />
+            <UserMenu user={this.props.user} />
           </div>
           <Switch>
             <Route exact path="/">
-              <Landing className="flex-fill" />
+              <Home className="flex-fill" />
             </Route>
             <Route path="/cities" component={Cities} />
-            <Route path="/itineraries/:city_id" component={Main} />
+            <Route path="/itineraries/:name" component={CityCard} />
             <Route path="/login" component={LogIn} />
             <Route path="/signup" component={SignUp} />
-            <Route path="/itineraries/favourites" component={Favorit} />
+            <Route path="/itineraries/favourites" component={Favourites} />
           </Switch>
           <Footer className="footer" />
-        </BrowserRouter>
+        </Router>
       </div>
     );
   }

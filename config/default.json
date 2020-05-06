@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://JanaReadDB:X4muREbyiGHg3N3H@cluster0-jqkhw.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "MYt_myJwtSecret"
+}

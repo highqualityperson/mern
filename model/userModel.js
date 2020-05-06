@@ -4,16 +4,17 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
+    unique: true
   },
   name: {
     type: String,
-    required: true,
+    required: true
   },
   password: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 });
 
+//name if module is the singular of how the database is called
 module.exports = mongoose.model("user", userSchema);

@@ -1,8 +1,10 @@
+// import {} from "../actions/";
+
 const initState = {
   token: localStorage.getItem("token"),
   isAuthenticated: null,
   isLoading: false,
-  user: null,
+  user: null
 };
 
 const authReducer = (state = initState, action) => {
@@ -10,7 +12,7 @@ const authReducer = (state = initState, action) => {
     case "USER_LOADING":
       return {
         ...state,
-        isLoading: true,
+        isLoading: true
       };
 
     case "USER_LOADED":
@@ -18,7 +20,7 @@ const authReducer = (state = initState, action) => {
         ...state,
         isAuthenticated: true,
         isLoading: false,
-        user: action.payload,
+        user: action.payload
       };
 
     case "LOGIN_SUCCESS":
@@ -28,7 +30,7 @@ const authReducer = (state = initState, action) => {
         ...state,
         ...action.payload,
         isAuthenticated: true,
-        isLoading: false,
+        isLoading: false
       };
     case "AUTH_ERROR":
     case "LOGIN_FAIL":
@@ -40,11 +42,11 @@ const authReducer = (state = initState, action) => {
         token: null,
         user: null,
         isAuthenticated: false,
-        isLoading: false,
+        isLoading: false
       };
     default:
       return {
-        ...state,
+        ...state
       };
   }
 };

@@ -1,6 +1,7 @@
 import React from "react";
-import PersonIcon from "@material-ui/icons/Person";
-import ActivitiesComp from "./Activities";
+// import randomUser from "../assets/random-user.png";
+import ActivitiesComp from "./ActivitiesComponent";
+// Material UI imports
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -9,6 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import FaceIcon from "@material-ui/icons/Face";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 // Style for toggle card
@@ -42,7 +44,7 @@ function ItineraryCard(props) {
       <div className="itinerary-card">
         <div className="profileInfo">
           <div className="profilePic">
-            <img src={PersonIcon} alt="profile pic" />
+            <FaceIcon></FaceIcon>
           </div>
           <div>{props.itinerary.user_name}</div>
         </div>

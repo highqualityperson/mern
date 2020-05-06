@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   itineraries: itinerariesReducer,
   activities: activitiesReducer,
   auth: authReducer,
-  error: errorReducer,
+  error: errorReducer
 });
 
 export default rootReducer;

@@ -1,5 +1,5 @@
-export const fetchItineraries = (city_id) => (dispatch) => {
-  fetch("/itineraries/" + city_id)
+export const fetchItineraries = (city_name) => (dispatch) => {
+  fetch("/itineraries/" + city_name)
     .then((res) => res.json())
     .then((result) => {
       dispatch({

@@ -1,5 +1,5 @@
 const initState = {
-  activities: [],
+  activities: []
 };
 
 const activitiesReducer = (state = initState, action) => {
@@ -7,12 +7,12 @@ const activitiesReducer = (state = initState, action) => {
     case "FETCH_ACTIVITIES":
       return {
         ...state,
-        activities: action.payload,
+        activities: action.payload
       };
 
     default:
       return {
-        ...state,
+        ...state
       };
   }
 };

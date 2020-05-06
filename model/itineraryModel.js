@@ -5,39 +5,20 @@ const itinerarySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  name: {
+  user_name: {
     type: String,
     required: true,
     unique: true,
   },
-  city_id: {
+  color: {
     type: String,
     required: true,
   },
-  user_name: {
+  hobby: {
     type: String,
-    required: true,
-  },
-  user_pic: {
-    type: String,
-    required: true,
-  },
-  likes: {
-    type: Number,
-    required: true,
-  },
-  time: {
-    type: Number,
-    required: true,
-  },
-  price: {
-    type: String,
-    required: true,
-  },
-  hashtags: {
-    type: Array,
     required: true,
   },
 });
 
+//name if module is the singular of how the database is called
 module.exports = mongoose.model("itinerary", itinerarySchema);

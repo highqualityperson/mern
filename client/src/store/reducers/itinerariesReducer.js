@@ -1,5 +1,5 @@
 const initState = {
-  itineraries: [],
+  itineraries: []
 };
 
 const itinerariesReducer = (state = initState, action) => {
@@ -7,12 +7,12 @@ const itinerariesReducer = (state = initState, action) => {
     case "FETCH_ITINERARIES":
       return {
         ...state,
-        itineraries: action.payload,
+        itineraries: action.payload
       };
 
     default:
       return {
-        ...state,
+        ...state
       };
   }
 };

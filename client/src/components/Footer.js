@@ -6,7 +6,7 @@ class MyFooter extends React.Component {
   render() {
     return (
       <Link to="/">
-        <HomeIcon style={{ fill: "black" }} />
+        <HomeIcon class="HomeButton"></HomeIcon>
       </Link>
     );
   }
